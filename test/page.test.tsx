@@ -4,6 +4,7 @@ import Home from "@/app/page";
 import { profile } from "@/data/profile";
 import { skillGroups } from "@/data/skills";
 import { career } from "@/data/career";
+import { projects } from "@/data/projects";
 
 describe("Home page", () => {
   it("renders header with name, kicker, tagline and contact", () => {
@@ -42,6 +43,17 @@ describe("Home page", () => {
       expect(screen.getByText(item.period)).toBeInTheDocument();
       expect(screen.getByText(item.role)).toBeInTheDocument();
       for (const b of item.bullets) expect(screen.getByText(b)).toBeInTheDocument();
+    }
+  });
+
+  it("renders Projects section with a flip card per project", () => {
+    render(<Home />);
+    expect(screen.getByRole("heading", { level: 2, name: "Projects" })).toBeInTheDocument();
+    for (const p of projects) {
+      expect(screen.getByRole("button", { name: new RegExp(p.name) })).toHaveAttribute(
+        "aria-pressed",
+        "false",
+      );
     }
   });
 });

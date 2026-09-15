@@ -1,6 +1,7 @@
 import Career from "@/components/Career";
 import Header from "@/components/Header";
 import Profile from "@/components/Profile";
+import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Profile />
       <Skills />
       <Career />
+      <Projects />
     </main>
   );
 }

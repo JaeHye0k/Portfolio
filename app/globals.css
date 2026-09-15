@@ -88,3 +88,49 @@
     padding: 40px 24px;
   }
 }
+
+/* Flip card (Projects) */
+.flip {
+  perspective: 1400px;
+  cursor: pointer;
+  min-height: 300px;
+}
+.flip-inner {
+  display: grid;
+  min-height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.flip.is-flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+.face {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.face-front {
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider);
+}
+.flip:hover .face-front {
+  border-color: var(--color-accent);
+}
+.face-back {
+  background: var(--color-ink);
+  color: var(--color-ground);
+  transform: rotateY(180deg);
+}
+.face-back a {
+  color: var(--color-accent-300);
+}
+@media (prefers-reduced-motion: reduce) {
+  .flip-inner {
+    transition: none;
+  }
+}
