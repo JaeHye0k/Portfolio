@@ -1,7 +1,15 @@
+import Career from "@/components/Career";
+import Header from "@/components/Header";
+import Profile from "@/components/Profile";
+import Skills from "@/components/Skills";
+
 export default function Home() {
   return (
     <main className="container-page">
-      <h1 className="text-[40px] leading-[1.05] tracking-[-0.02em]">이재혁</h1>
+      <Header />
+      <Profile />
+      <Skills />
+      <Career />
     </main>
   );
 }
