@@ -12,7 +12,7 @@ const groupIcons: Record<SkillIcon, LucideIcon> = {
 export default function Skills() {
   return (
     <Section title="Skills" icon={Layers}>
-      <div className="grid grid-cols-1 gap-x-6 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-x-6 md:grid-cols-3 print:grid-cols-3">
         {skillGroups.map((group) => {
           const Icon = groupIcons[group.icon];
           return (

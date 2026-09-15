@@ -6,7 +6,7 @@ const contactIconClass = "shrink-0 text-neutral-600";
 export default function Header() {
   const { kicker, name, tagline, contact } = profile;
   return (
-    <header className="grid grid-cols-1 gap-6 border-b-2 border-divider pb-5 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+    <header className="grid grid-cols-1 gap-6 border-b-2 border-divider pb-5 md:grid-cols-[minmax(0,1fr)_auto] md:items-end print:grid-cols-[minmax(0,1fr)_auto] print:items-end">
       <div>
         <div className="mb-2.5 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-accent">
           <Code size={13} strokeWidth={2} aria-hidden />

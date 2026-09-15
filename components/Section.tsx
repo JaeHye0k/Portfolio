@@ -18,7 +18,7 @@ export default function Section({
 }: SectionProps) {
   return (
     <section
-      className={`grid grid-cols-1 gap-3 py-[22px] md:grid-cols-[140px_minmax(0,1fr)] md:gap-6 ${
+      className={`grid grid-cols-1 gap-3 py-[22px] md:grid-cols-[140px_minmax(0,1fr)] md:gap-6 print:grid-cols-[140px_minmax(0,1fr)] print:gap-6 ${
         last ? "" : "border-b-2 border-divider"
       }`}
     >
