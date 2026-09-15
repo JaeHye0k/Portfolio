@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 이재혁 — Frontend Web Developer 이력서
 
-## Getting Started
+Claude Design(Modernist 디자인 시스템)으로 만든 이력서를 Next.js로 구현한 단일 페이지 사이트입니다.
 
-First, run the development server:
+## 실행
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run test     # Vitest
+npm run lint
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 구조
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `app/` — 레이아웃, 페이지, 전역 스타일(디자인 토큰 `@theme`, flip 카드, 인쇄)
+- `components/` — Header, Profile, Skills, Career, Projects, ProjectCard, Section
+- `data/` — 이력서 콘텐츠. 내용을 바꾸려면 이 폴더의 파일만 수정합니다
+- `test/` — Vitest + Testing Library
+- `docs/superpowers/` — 설계 문서와 구현 계획
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 인쇄
 
-## Learn More
+브라우저 인쇄(⌘P)로 A4 이력서 PDF를 만들 수 있습니다. 프로젝트 카드는 앞면·뒷면이 모두 출력됩니다.
 
-To learn more about Next.js, take a look at the following resources:
+## TODO
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `data/career.ts`의 use9 업무 내용 채우기
